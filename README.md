@@ -1,4 +1,4 @@
-# reinforcement
+# Reinforcement Learning
 
 Agent to perform hedging and replicate various payoff
 
