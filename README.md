@@ -4,6 +4,7 @@ Agent to perform hedging and replicate various payoff
 
 Environment included:
 1. Forward Hedging 
+
 Simple train to the agent which to learn a short position hegding activities.
 We punish the agent for any hedging error as our aim is to mitigate risk, refer to line 56 and line 73.
 We reward the agent when it has sqaured its position.
@@ -11,6 +12,7 @@ We reward the agent when it has sqaured its position.
 This is a simple lerning where the agent has a short position at the begining and train over the same timeframe. However, this work has provide the core idea of reinforcement learning. The agent play with the rules set and explores the new thing and update the its 'brain', ie the q-table.
 
 2. Option dynamic hedging and cost analysis(in progress)
+
 Simple option writer position mangement.
 
 The agent has given a short call option and learn to hedge the option risk with buy or sell different unit physical stock.
