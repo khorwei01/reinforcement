@@ -3,7 +3,21 @@
 Agent to perform hedging and replicate various payoff
 
 Environment included:
-1. Forward Hedging
-2. Option dynamic hedging and cost analysis(in coming)
-3. Option strategy payoff replicate and cost analysis(in coming)
-4. Digital option hedging and cost analysis(in coming)
+1. Forward Hedging 
+Simple train to the agent which to learn a short position hegding activities.
+We punish the agent for any hedging error as our aim is to mitigate risk, refer to line 56 and line 73.
+We reward the agent when it has sqaured its position.
+
+This is a simple lerning where the agent has a short position at the begining and train over the same timeframe. However, this work has provide the core idea of reinforcement learning. The agent play with the rules set and explores the new thing and update the its 'brain', ie the q-table.
+
+2. Option dynamic hedging and cost analysis(in progress)
+Simple option writer position mangement.
+
+The agent has given a short call option and learn to hedge the option risk with buy or sell different unit physical stock.
+
+It is restricted to hold zero or 1 unit of stock all the time.
+
+The leanring rate is as well perform as the previous work.
+
+Idea: to implement convulutional neural network, graphical learn the movement relationship between the option and stock price.
+
