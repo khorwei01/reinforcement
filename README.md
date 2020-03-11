@@ -31,6 +31,6 @@ Agent can only enter into two option to replicate a long or short position. Long
 
 Agent is given option quoted with range of strike in the market quote (with same tenor).
 
-q_table seperate into two, replicate wither a long position or a short position.
+q_table seperate into two, replicate either a long position or a short position.
 
 Conclusion: Agent can replicate a long or short position exactly as Put-call parity stated.
