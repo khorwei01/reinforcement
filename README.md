@@ -23,3 +23,14 @@ The leanring rate is as well perform as the previous work.
 
 Idea: to implement convulutional neural network, graphical learn the movement relationship between the option and stock price.
 
+3. PutCall Parity 
+
+Allow agent to do combination of vanilla call and put to test put call parity.
+
+Agent can only enter into two option to replicate a long or short position. Long two call, long one call short one call and so ons. 
+
+Agent is given option quoted with range of strike in the market quote (with same tenor).
+
+q_table seperate into two, replicate wither a long position or a short position.
+
+Conclusion: Agent can replicate a long or short position exactly as Put-call parity stated.
