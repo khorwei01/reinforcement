@@ -33,4 +33,6 @@ Agent is given option quoted with range of strike in the market quote (with same
 
 q_table seperate into two, replicate either a long position or a short position.
 
+
 Conclusion: Agent can replicate a long or short position exactly as Put-call parity stated.
+![](image/put_call_learning.png)
