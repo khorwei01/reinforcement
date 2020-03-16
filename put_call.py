@@ -81,7 +81,7 @@ if start_q_table is None:
         q_table[k] = dict() # long stock, short stock
         for i in range(n*4):
             for j in range(n*4):
-                q_table[k][i,j]=-np.random.randint(100,120)
+                q_table[k][i,j]=-np.random.randint(100,150)
                 
 
 LEARNING_RATE = 0.4
@@ -89,7 +89,7 @@ DISCOUNT = 0.95
 max_future_q = 0
 epsilon = 0.999
 episode_rewards = []
-HM_EPISODES = 20000
+HM_EPISODES = 20000 # better to have all combination (58*4)*(58*4)
 EPS_DECAY = 0.99
 put_call_parity = [0,1] # 0 equal to long, 1 equal to short
 
@@ -107,10 +107,10 @@ for i in range(HM_EPISODES):
                          & (data_opt1['mature']==check[0]) 
                          & (data_opt1['cp_flag']=='P'),['strike_price','best_bid','best_offer']].reset_index()
     draw = np.linspace(0,4*n-1,4*n)
-    #long call range(1, 1*len(strike_list)+1)
-    #short call = range(1*len(strike_list)+1, 2*len(strike_list)+1)
-    #long put = range(2*len(strike_list)+1, 3*len(strike_list)+1)
-    #short put = range(3*len(strike_list)+1, 4*len(strike_list)+1)
+    #long call range(1, 59)
+    #short call = range(59,117)
+    #long put = range(117, 175)
+    #short put = range(175, 232)
     if np.random.random() > epsilon: 
         # GET THE ACTION
         action = max(q_table[train], key=q_table[train].get) #Exploitation
@@ -122,14 +122,14 @@ for i in range(HM_EPISODES):
     pay = [payoff(S=close, pick=action[0], choice=len(draw), strike_list=strike_list, call=call, put=put), 
            payoff(S=close, pick=action[1], choice=len(draw), strike_list=strike_list, call=call, put=put)]
     
-    trade_hist = [post_dict[action[i]//n] for i in range(len(action))]
+    #trade_hist = [post_dict[action[i]//n] for i in range(len(action))]
     premium += sum([pay[i][1] for i in range(len(pay))])
     reward = [close-spot, spot-close][train] #pnl long, pnl stock
-    print((i,reward,sum([pay[i][0] for i in range(len(pay))]), premium) )
     reward = -100*abs(reward-sum([pay[i][0] for i in range(len(pay))]))-100*abs(premium) 
     current_q = q_table[train][action]
     new_q = (1 - LEARNING_RATE) * current_q + LEARNING_RATE * (reward + DISCOUNT * max_future_q)
     q_table[train][action] = new_q
+    print((i,reward,sum([pay[i][0] for i in range(len(pay))]), premium, epsilon) )
     episode_reward = reward
     episode_rewards.append(episode_reward)
     epsilon *= EPS_DECAY
