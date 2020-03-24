@@ -27,4 +27,4 @@ Output: qtable-put_chat_time.pickle
 
 Learning speed: 
 
-![](reinforcemnt/image/put_call_time.png)
+![](https://github.com/khorwei01/reinforcement/blob/master/image/put_call_time.png)
