@@ -24,4 +24,4 @@ Take 5 strikes, 113-117, 117-113 = 4, 113-117 = -4
 The Agent managed to choose long ATM call and short ATM put at the first time step and do nth at the following time.
 
 Output: qtable-put_chat_time.pickle
-Learning speed: ![](image/put_call_time.png)
+Learning speed: ![](reinforcemnt/image/put_call_time.png)
