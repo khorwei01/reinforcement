@@ -1,4 +1,6 @@
-Option and stock info: Option1.csv and Option 2.csv 
+Option and stock info: 
+Option1.csv and Option 2.csv 
+
 
 Put_Call_Parity: put_call.py
 Agent learnt the best way to replicate a forward is to long an ATM call option and short an ATM put option, given the consideration of premiums. This work excludes the interest and time steps.
