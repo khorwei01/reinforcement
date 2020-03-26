@@ -2,14 +2,16 @@
 
 Agent to perform hedging and replicate various payoff
 
-Environment included:
-1. Forward Hedging 
+Folder included:
+1. Forward_Hedging 
 
 Simple train to the agent which to learn a short position hegding activities.
 We punish the agent for any hedging error as our aim is to mitigate risk, refer to line 56 and line 73.
 We reward the agent when it has sqaured its position.
 
 This is a simple lerning where the agent has a short position at the begining and train over the same timeframe. However, this work has provide the core idea of reinforcement learning. The agent play with the rules set and explores the new thing and update the its 'brain', ie the q-table.
+
+Other than that, we also include serveral random element or restriction in the environment to let the agent sort out best solution
 
 2. Option dynamic hedging and cost analysis(in progress)
 
@@ -23,7 +25,7 @@ The leanring rate is as well perform as the previous work.
 
 Idea: to implement convulutional neural network, graphical learn the movement relationship between the option and stock price.
 
-3. PutCall Parity 
+3. Pu_tCall_RL 
 
 Allow agent to do combination of vanilla call and put to test put call parity.
 
