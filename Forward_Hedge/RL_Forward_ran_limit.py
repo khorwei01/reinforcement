@@ -105,12 +105,12 @@ for episode in range(HM_EPISODES):
             for j in range(len(trade_hist)-1,0,-1):
                 th = trade_hist[j-1]
                 nx = trade_hist[j]
-                if state < 0 or state > 0:
+                if len(trade_hist)-1 == j:
                     max_future_q = nx[4]
                 else:
-                    s_range = [q_table[i][ii][10+k] for k in range(int(2*limit*10)+1)]
+                    s_range = [q_table[i][ii][10+k-int(limit*10)] for k in range(int(2*limit*10)+1)]
                     max_future_q = max(s_range)
-                q_table[th[0]][th[1]][th[2]] = (1-LEARNING_RATE) * th[3] + LEARNING_RATE * (th[4] + DISCOUNT * nx[4])
+                q_table[th[0]][th[1]][th[2]] = (1-LEARNING_RATE) * th[3] + LEARNING_RATE * (th[4] + DISCOUNT * max_future_q )
             
             print(episode, i, ii, action_key, reward, epsilon)
             break
