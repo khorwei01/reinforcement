@@ -7,8 +7,9 @@ Option1.csv and Option 2.csv
 Agent learnt the best way to replicate a forward is to long an ATM call option and short an ATM put option, given the consideration of premiums. This work excludes the interest and time steps.
 
 3. Put_Call_Parity_Time: put_call_time_com.py
-Agent learnt the best way to replicate a forward is to long an ATM call option and short an ATM put option, given the consideration of premiums. This work includes time step condition (3 time steps and 5 strike). 
-With the limitation of memory, this work mixed the possible trading strategy of replicating a forward but pair option trading in the first step. 
+
+Agent learnt the best way to replicate a forward given the consideration of premiums. This work includes time step condition (3 time steps and 5 strike). The agent will long an ATM call and short an ATM put at the first time step, then it will enter long and short call/put at the same strike at each following time step. This work gives no choice to the agent to do nothing. 
+With the limitation of infinity of the possible value changed of the portfolio, this work only consider the possible of the value changed of portfolio should the agent do a pair trading(long call/put and short put/call with avalaible strike) 
 
 1st step:
 
@@ -25,8 +26,6 @@ example:
 
 Take 5 strikes, 113-117, 117-113 = 4, 113-117 = -4
 9+4+4=17
-
-The Agent managed to choose long ATM call and short ATM put at the first time step and do nth at the following time.
 
 Output: qtable-put_chat_time.pickle
 
