@@ -11,13 +11,13 @@ Agent learnt the best way to replicate a forward is to long an ATM call option a
 
 3. Put_Call_Parity_Time: 
 
-- pc_t.py (historical timestep + premium + allow to do combination of nothing, long a call and short a put only)
+pc_t.py (historical timestep + premium + allow to do nothing, long a call or short a put)
 
-The agent will long an ATM call and short an ATM put at the first time step and do nothing after that.
+Agent manage to learn long ATM call and short ATM put at the first time step and do nothing after that. As the consideration of premium, we discriminate the purnishment. More weight assigned to the value changed in the portfolio.
 
-- cp_t_wp_atm.py (historical timestep + premium + not allow to do nothing + must enter two option position)
+- cp_t_wp_atm.py (historical timestep + premium + must enter two option position, long/short call/put)
 
-Agent learnt the best way to replicate a forward given the consideration of premiums. This work includes time step condition (3 time steps and 5 strike). The agent will long an ATM call and short an ATM put at the first time step, then it will enter long and short call (or put) at the ATM strike at each following time step. This work gives no choice to the agent to do nothing. 
+Agent learnt the best way to replicate a forward given the consideration of premiums. This work includes time step condition (3 time steps and 5 strike). The agent will long an ATM call and short an ATM put at the first time step, then it will enter long and short call (or put) at the ATM strike at each following time step. 
 
 - cp_t_wop_atm.py (historical timestep +  x premium + not allow to do nothing + must enter two option position)
 
