@@ -1,4 +1,4 @@
-This project is aimed to price cms with various tenor.
+This project is aimed to correctly price CMS with various tenor.
 
 1. bootstrape the OIS discount curve and Libor discount curve. The overnight OIS rate are assumed to be flat from one tenor to another tenor while the LIBOR rate are linearly interpolated.
 
