@@ -18,4 +18,4 @@ Hedge 84 times in 21 trading days
 mean = 0.009
 standard dev(%) = 0.002%
 
-Standard deviation decrease by <img src="https://render.githubusercontent.com/render/math?math=\frac{\sqrt(84)}{sqrt(21)}">
+Standard deviation decrease by <img src="https://render.githubusercontent.com/render/math?math=\frac{\sqrt(84)}{\sqrt(21)}">
