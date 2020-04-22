@@ -13,9 +13,9 @@ standard dev(%) = 0.004%
 
 Hedge 84 times in 21 trading days
 
-<img src="https://github.com/khorwei01/reinforcement/blob/master/image/21trial.png" width="350" height="250">
+<img src="https://github.com/khorwei01/reinforcement/blob/master/image/84trial.png" width="350" height="250">
 
 mean = 0.009
 standard dev(%) = 0.002%
 
-Standard deviation decrease by <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{\frac{\sqrt 84}{\sqrt 21}}"> times
+Standard deviation decrease by <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{\frac{\sqrt 84}{\sqrt 21}}=\frac{1}{2}"> 
