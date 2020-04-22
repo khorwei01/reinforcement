@@ -3,10 +3,10 @@ This project is aimed to price cms with various tenor.
 1. bootstrape the OIS discount curve and Libor discount curve. The overnight OIS rate are assumed to be flat from one tenor to another tenor while the LIBOR rate are linearly interpolated.
 
 OIS discount
-![](https://github.com/khorwei01/reinforcement/blob/master/image/OISdf.png v=4&s=200)
-<img src="https://github.com/khorwei01/reinforcement/blob/master/image/OISdf.png" width="100" height="100">
+<img src="https://github.com/khorwei01/reinforcement/blob/master/image/OISdf.png" width="400" height="250">
+
 LIBOR discount
-![](https://github.com/khorwei01/reinforcement/blob/master/image/IRSdf.png =250x250)
+<img src="https://github.com/khorwei01/reinforcement/blob/master/image/IRSdf.png" width="400" height="250">
 
 2. Calibration on the SABR parameter. As the problem of multiple global minimal axists, simple least sqaure function couldn't produce a consistent result. Therefore, we emply stochastic optimization algo - Basinhopping to obtain the global minimal and retrieve consistent SABR parameter. We also calibrate displaced diffusion model by employing least sqaure method.
 
