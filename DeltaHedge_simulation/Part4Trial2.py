@@ -41,10 +41,7 @@ def replicate_error(S, K, Sigma, r, T, t):
         addcost = (1-delta[-1])*S[-1]
         cost1 = K #will get K if ITM
     else:
-        #delta [-1] = 0
         addcost = (0-delta[-1])*S[-1]
-    #we have total 22 stock price, take first 20 only, last one determine when exercise daten arrived?     
-    #delta [:-1]= norm.cdf((np.log(S[:-2]/K)+(r+1/2*Sigma**2)*(T-t[:-2]))/(Sigma*np.sqrt(T-t[:-2]))) 
     cost = [S[0]*delta[0]] + [S[i]*(delta[i]-delta[i-1]) for i in range(1,len(S)-1)] 
     result = sum(cost*(np.flip(np.exp(r*t[1:])))) - cost1 + addcost
     return result
