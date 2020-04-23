@@ -1,4 +1,12 @@
-# Reinforcement Learning
+# Project & Reinforcement Learning
+
+Project: 
+ 
+ - Option Implied Tree (replicate derman work)
+ 
+ - Calibration and SABR parameter, solving the global minimal through stochastic optimization and weighted wings control
+ 
+ - Simulation of option delta hedging.
 
 Agent to perform hedging and replicate various payoff
 
