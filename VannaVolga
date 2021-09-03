@@ -1,1 +1,8 @@
 
+The main use of Vanna Volga is in FX option pricing. rule of thumb for FX exotic option
+
+The main idea is to price in the vanna and volga hedging cost.
+
+There are vanna volga method, first approximation, second approximation.
+
+Going to compare the result with quadratic interpolation
